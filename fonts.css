@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'EuclidSquare';
+    src: url('fonts/EuclidSquare-Light.ttf');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'EuclidSquare';
+    src: url('fonts/EuclidSquare-Regular.ttf');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'EuclidSquare';
+    src: url('fonts/EuclidSquare-Bold.ttf');
+    font-weight: 700;
+}
