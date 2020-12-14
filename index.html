@@ -3,18 +3,32 @@
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bizning Uylar Snow animation</title>
+  <title>Акция</title>
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+  <!-- test preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__wrap">
+      <div class="preloader__logo">
+          <img src="icon/logo.svg" alt="Bizning Uylar" class="img-fluid">
+      </div>
+        <div class="preloader__icon">
+          <img src="icon/headphones.svg" alt="headphones">
+        </div>
+      <div class="preloader__text">
+        Для воспроизведения звукового эффекта <br> нажмите кнопку ниже
+      </div>
+
+      <a href="#" class="btn__preloader">ПЕРЕЙТИ НА САЙТ</a>
+  </div>
+</div>
+<!-- test preloader end -->
+
+
 
   
-    <!-- OVERLAY
-    =============================== -->
-    <div class="overlay first"></div>
-    <div class="overlay second"></div>
-    <div class="overlay third"></div>
 
   <!-- modal -->
   <div class="overlay">
@@ -125,25 +139,10 @@
                 <img src="icon/play.svg" id="icon">
               </div>
 
-              <audio id="mySong">
+              <audio loop id="mySong">
                 <source src="audio/Bells.mp3" type="audio/mp3">
               </audio>
 
-              <script>
-                var mySong = document.getElementById("mySong");
-                var icon = document.getElementById("icon");
-
-                icon.onclick = function() {
-                  if(mySong.paused){
-                      mySong.play();
-                    icon.src = "icon/pause.svg";
-                  }
-                  else {
-                    mySong.pause();
-                    icon.src = "icon/play.svg";
-                  }
-                }
-              </script>
             <!-- magic-music end -->
 
             </div>
@@ -349,23 +348,23 @@
   </script>
 
 
+  <!-- music -->
+    <script>
+      var mySong = document.getElementById("mySong");
+      var icon = document.getElementById("icon");
 
-<!-- test preloader -->
-  <!-- icons -->
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
-  <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-    integrity="sha256-lPE3wjN2a7ABWHbGz7+MKBJaykyzqCbU96BJWjio86U=" crossorigin="anonymous"></script>
-  <!-- three js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/108/three.min.js"
-    integrity="sha256-3mBEX8I0uMLF7+AUjJeTCelosuorzYpqwBMBPDTyQqY=" crossorigin="anonymous"></script>
-  <!-- hover-effect js -->
-  <script src="./hover-effect.umd.js"></script>
-
-
-
-<!-- test preloader end -->
-
+      icon.onclick = function() {
+        if(mySong.paused){
+            mySong.play();
+          icon.src = "icon/pause.svg";
+        }
+        else {
+          mySong.pause();
+          icon.src = "icon/play.svg";
+        }
+      }
+    </script>
+  <!-- music end -->
 
 
 </body>
